@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* =============================================================================
+   KAMORA — 2026 Quiet-Luxury Architectural Wellness Design System
+   Warm Alabaster (#FAFAF8) · Limestone (#F2F0EB) · Obsidian (#0E1116)
+   Deep Mineral Accent (#1C3D5A) · Brushed Champagne (#B89768)
+   ============================================================================= */
+
+:root {
+  --bg-canvas: #fafaf8;
+  --bg-pure: #ffffff;
+  --bg-stone: #f2f0eb;
+  --bg-obsidian: #0e1116;
+  --bg-obsidian-card: #161b22;
+
+  --ink-primary: #11151b;
+  --ink-secondary: #5c636e;
+  --ink-muted: #8a9099;
+
+  --accent-mineral: #1c3d5a;
+  --accent-mineral-soft: #eaf0f5;
+  --accent-champagne: #b89768;
+
+  --line-subtle: #e6e3dc;
+  --line-strong: #d5d0c6;
+  --line-dark: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-canvas: #fafaf8;
+  --color-stone-soft: #f2f0eb;
+  --color-obsidian: #0e1116;
+  --color-obsidian-card: #161b22;
+  --color-ink: #11151b;
+  --color-ink-muted: #5c636e;
+  --color-mineral: #1c3d5a;
+  --color-champagne: #b89768;
+  --color-line: #e6e3dc;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--ink-primary);
+  background-color: var(--bg-canvas);
+}
+
+body {
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink-primary);
+  background-color: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-editorial {
+  font-family: var(--font-instrument), Georgia, serif;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+}
+
+.font-mono-tech {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Architectural surfaces & ambient depth */
+.bg-architectural-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(184, 151, 104, 0.08), transparent 45%),
+    radial-gradient(circle at 12% 85%, rgba(28, 61, 90, 0.05), transparent 42%),
+    #fafaf8;
+}
+
+.bg-obsidian-ambient {
+  background: radial-gradient(circle at 75% 15%, rgba(184, 151, 104, 0.14), transparent 42%),
+    radial-gradient(circle at 15% 85%, rgba(57, 121, 168, 0.16), transparent 48%),
+    #0e1116;
+}
+
+.shadow-soft {
+  box-shadow: 0 1px 2px rgba(14, 17, 22, 0.04), 0 12px 32px -16px rgba(14, 17, 22, 0.08);
+}
+
+.shadow-elevated {
+  box-shadow: 0 2px 6px rgba(14, 17, 22, 0.05), 0 28px 60px -24px rgba(14, 17, 22, 0.16);
+}
+
+/* Modern Web Guidance: prevent-page-scroll-under-modal-dialog */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  background: rgba(14, 17, 22, 0.56);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+/* Single-input spaced SMS OTP field (modern-web-guidance: sms-otp-form) */
+.otp-single-input {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 1.35rem;
+  letter-spacing: 0.44em;
+  min-height: 54px;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
